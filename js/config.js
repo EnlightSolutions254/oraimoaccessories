@@ -57,8 +57,38 @@ const ORAIMO_CONFIG = {
 
   delivery: {
     short: "Free Nairobi CBD Delivery",
-    badge: "Free CBD delivery",
-    full: "Free delivery within Nairobi CBD. For other areas, delivery fees are confirmed with you on WhatsApp based on your exact location — typically 1–2 days within Nairobi and 2–4 days upcountry."
+    badge: "Free CBD delivery within 24hrs",
+    full: "Free delivery within Nairobi CBD, delivered within 24 hours. Other Nairobi areas attract a delivery fee based on the zone you select at checkout, added to your total below.",
+    // Rendered as real HTML (bold + bullet list) wherever .delivery-note
+    // appears — see initFaq/DOMContentLoaded in app.js. Edit the wording
+    // here; app.js just injects it as-is.
+    noteHtml: "<ul>"
+      + "<li><strong>FREE</strong> delivery within Nairobi CBD.</li>"
+      + "<li>Nairobi (outside CBD): KSh 200\u2013500 depending on location.</li>"
+      + "<li>Outside Nairobi: Delivery via courier at the customer's cost.</li>"
+      + "<li>Same-day delivery within Nairobi.</li>"
+      + "<li>1\u20132 days outside Nairobi.</li>"
+      + "</ul>",
+    // Delivery zones offered at checkout (cart drawer > Delivery Details).
+    // Rendered top-to-bottom by app.js as radio options, in this order.
+    //   id    — internal key, used by app.js and included in the WhatsApp order (don't change once live, or old habits/links referencing it break)
+    //   label — what the customer sees as the zone name
+    //   sub   — small helper text under the label
+    //   fee   — delivery fee in KES. 0 = shown as "Free"
+    //
+    // PLACEHOLDER — every fee below except "cbd" is an estimate. Adjust,
+    // rename, add, or remove zones freely to match your real rider rates
+    // and the areas you actually deliver to. Keep "custom" LAST — it's the
+    // catch-all fee for any area not covered by the zones above it; the
+    // customer types their exact location separately in "Delivery location".
+    zones: [
+      { id: "cbd", label: "Nairobi CBD", sub: "Delivered within 24 hours", fee: 0 },
+      { id: "near", label: "Westlands, Upperhill, South B / South C, Ngara", sub: "Delivery fee confirmed on WhatsApp", fee: 150 },
+      { id: "mid", label: "Kilimani, Lavington, Eastleigh, Kasarani, Embakasi", sub: "Delivery fee confirmed on WhatsApp", fee: 200 },
+      { id: "outer", label: "Karen, Langata, Runda, Ruaka, Roysambu, Donholm", sub: "Delivery fee confirmed on WhatsApp", fee: 300 },
+      { id: "satellite", label: "Ngong, Rongai, Kikuyu, Ruiru, Kitengela, Athi River", sub: "Delivery fee confirmed on WhatsApp", fee: 400 },
+      { id: "custom", label: "Other location", sub: "Not listed above? Add it under Delivery location below", fee: 500 }
+    ]
   },
 
   payment: {
@@ -74,9 +104,9 @@ const ORAIMO_CONFIG = {
   },
 
   googleMaps: {
-    query: "Information House, Mfangano Street, Nairobi, Kenya",
-    embedUrl: "https://www.google.com/maps?q=Information+House%2C+Mfangano+Street%2C+Nairobi%2C+Kenya&output=embed",
-    directionsUrl: "https://www.google.com/maps/search/?api=1&query=Information+House%2C+Mfangano+Street%2C+Nairobi%2C+Kenya"
+    query: "-1.2870445,36.8281673",
+    embedUrl: "https://www.google.com/maps?q=loc:-1.2870445,36.8281673&output=embed",
+    directionsUrl: "https://www.google.com/maps/search/?api=1&query=-1.2870445,36.8281673"
   },
 
   priceRange: "KES 250 - KES 9000",

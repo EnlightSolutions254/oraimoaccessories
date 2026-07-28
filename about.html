@@ -60,7 +60,7 @@
     <div class="header-actions">
       <button class="icon-btn" data-open-search aria-label="Search products"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
       <a href="https://wa.me/254712587876" data-cfg-href="whatsapp" target="_blank" rel="noopener" class="icon-btn" aria-label="Chat on WhatsApp" style="display:none" id="header-wa"></a>
-      <button class="icon-btn" data-open-cart aria-label="Open cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="18" cy="21" r="1"/><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/></svg><span class="cart-count" style="display:none">0</span></button>
+      <button class="icon-btn" data-open-cart aria-label="View my orders"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="18" cy="21" r="1"/><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/></svg><span class="cart-count" style="display:none">0</span></button>
       <button class="icon-btn hamburger-btn" aria-label="Open menu">
         <span class="hamburger"><span></span><span></span><span></span></span>
       </button>
@@ -106,7 +106,7 @@
     <h2>Why we started</h2>
     <p>Too many people were being sold counterfeit "Oraimo" accessories at markets and online — devices that died within weeks and came with zero support. We set out to fix that by becoming an authorized dealer, stocking only genuine products, and backing every order with a real warranty.</p>
     <h2>How ordering works</h2>
-    <p>Browse the shop, add whatever you need to your cart, and check out — no card details, no account required. Your order details are packaged into a WhatsApp message so our team can confirm stock, pricing and delivery with you directly, human to human.</p>
+    <p>Browse the shop, tap Buy Now on whatever you need to add it to your order list, and check out — no card details, no account required. Your order details are packaged into a WhatsApp message so our team can confirm stock, pricing and delivery with you directly, human to human.</p>
     <h2>Where we deliver</h2>
     <p>We dispatch orders from Nairobi to all 47 counties through trusted courier partners, with same-day options available within the city for orders placed before 2pm.</p>
   </div>
@@ -181,7 +181,6 @@
         <h4>Get in touch</h4>
         <li>📍 <span data-cfg="address.short">Information House, Mfangano Street, Nairobi</span></li>
         <li>🕒 <span data-cfg="hours.weekday">Mon–Sat: 9:00 AM – 7:00 PM</span></li>
-        <li>🕒 <span data-cfg="hours.sunday">Sunday: 11:00 AM – 5:00 PM</span></li>
         <a href="https://wa.me/254712587876" data-cfg-href="whatsapp" target="_blank" rel="noopener" data-cfg-href="whatsapp">WhatsApp: <span data-cfg="phoneDisplay">+254 712 587 876</span></a>
       </div>
     </div>
@@ -202,21 +201,21 @@
   <a href="index.html" data-nav="home"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>Home</a>
   <a href="shop.html" data-nav="shop"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>Shop</a>
   <a href="#" data-open-search><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Search</a>
-  <a href="#" data-open-cart style="position:relative;"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="18" cy="21" r="1"/><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/></svg>Cart<span class="bn-cart-badge" style="display:none">0</span></a>
+  <a href="#" data-open-cart style="position:relative;"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="18" cy="21" r="1"/><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L21 8H6"/></svg>Orders<span class="bn-cart-badge" style="display:none">0</span></a>
   <a href="contact.html" data-nav="contact"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4.5 5-6 8-6s6.5 1.5 8 6"/></svg>Account</a>
 </nav>
 
 <script>document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());</script>
 
 <div class="scrim scrim-cart" style="z-index:399;"></div>
-<aside class="cart-drawer" aria-label="Shopping cart" data-step="review">
+<aside class="cart-drawer" aria-label="My orders" data-step="review">
   <div class="cart-head">
-    <button type="button" class="close-btn cart-back-btn" id="cart-back-btn" aria-label="Back to cart">
+    <button type="button" class="close-btn cart-back-btn" id="cart-back-btn" aria-label="Back">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
     </button>
-    <h3 class="cart-head-title-review">Your Cart</h3>
+    <h3 class="cart-head-title-review">My Orders</h3>
     <h3 class="cart-head-title-details">Delivery Details</h3>
-    <button class="close-btn cart-close" aria-label="Close cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg></button>
+    <button class="close-btn cart-close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg></button>
   </div>
 
   <div class="cart-items"></div>
@@ -249,7 +248,7 @@
 
     <button class="btn btn-whatsapp btn-block cart-step-btn-details" id="checkout-btn">
       <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M17 14.3c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z"/></svg>
-      Checkout via WhatsApp
+      Send Order via WhatsApp
     </button>
   </div>
 </aside>

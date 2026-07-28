@@ -5,7 +5,43 @@
    ========================================================= */
 const WHATSAPP_NUMBER = ORAIMO_CONFIG.whatsappNumber;
 const STORE_NAME = ORAIMO_CONFIG.businessName;
-const DELIVERY_FLAT_FEE = 0; // delivery agreed over WhatsApp, kept at 0 — Nairobi CBD delivery is free (see config.js)
+/* Delivery fee depends on the zone the customer picks at checkout.
+   The full list of zones (id, label, sub-label, fee) lives in ONE place —
+   config.js — ORAIMO_CONFIG.delivery.zones. Add/remove/re-price zones
+   there; this file just looks them up. */
+function zoneList(){
+  return ORAIMO_CONFIG.delivery.zones;
+}
+function zoneById(id){
+  return zoneList().find(z => z.id === id) || zoneList()[0];
+}
+function deliveryFeeFor(zoneId){
+  return zoneById(zoneId).fee;
+}
+function zoneLabelFor(zoneId){
+  return zoneById(zoneId).label;
+}
+function selectedZone(){
+  return document.querySelector('input[name="co-zone"]:checked')?.value || zoneList()[0].id;
+}
+/* Builds the zone-options radio list in the cart drawer from
+   ORAIMO_CONFIG.delivery.zones, so the markup never has to be hand-edited
+   when a zone is added, renamed, or re-priced. */
+function renderZoneOptions(){
+  const container = document.querySelector(".zone-options");
+  if(!container) return;
+  const zones = zoneList();
+  const checkedId = document.querySelector('input[name="co-zone"]:checked')?.value || zones[0].id;
+  container.innerHTML = zones.map(z => `
+    <label class="zone-option${z.id===checkedId ? " active" : ""}" data-zone-option="${z.id}">
+      <input type="radio" name="co-zone" value="${z.id}"${z.id===checkedId ? " checked" : ""}>
+      <span class="zone-option-main">
+        <span class="zone-option-title">${z.label}</span>
+        <span class="zone-option-sub">${z.sub}</span>
+      </span>
+      <span class="zone-option-fee${z.fee===0 ? " zone-option-fee-free" : ""}">${z.fee===0 ? "Free" : "+ " + fmtKES(z.fee)}</span>
+    </label>`).join("");
+}
 
 /* ---------------- Utilities ---------------- */
 function fmtKES(n){
@@ -96,7 +132,7 @@ function toast(msg){
 function fmtKESPlain(n){
   return "KES " + Math.round(Number(n));
 }
-function buildWhatsAppMessage({name, phone, location:loc, items}){
+function buildWhatsAppMessage({name, phone, location:loc, zone, items}){
   let lines = [];
   lines.push(`Hello ${STORE_NAME}`);
   lines.push("I would like to place the following order.");
@@ -109,13 +145,18 @@ function buildWhatsAppMessage({name, phone, location:loc, items}){
     lines.push(`Subtotal: ${fmtKESPlain(it.qty*it.price)}`);
     lines.push("");
   });
-  const total = items.reduce((s,i)=>s+i.qty*i.price,0);
-  lines.push(`*TOTAL: ${fmtKESPlain(total)}*`);
+  const subtotal = items.reduce((s,i)=>s+i.qty*i.price,0);
+  const deliveryFee = deliveryFeeFor(zone);
+  const zoneLabel = zoneLabelFor(zone);
+  lines.push(`Subtotal: ${fmtKESPlain(subtotal)}`);
+  lines.push(`Delivery (${zoneLabel}): ${deliveryFee ? fmtKESPlain(deliveryFee) : "Free"}`);
+  lines.push(`*TOTAL: ${fmtKESPlain(subtotal + deliveryFee)}*`);
   lines.push("");
   lines.push("*DELIVERY DETAILS*");
   lines.push(`Name: ${name || "Not provided"}`);
   lines.push(`Phone: ${phone || "Not provided"}`);
   lines.push(`Location: ${loc || "Not provided"}`);
+  lines.push(`Zone: ${zoneLabel}`);
   lines.push("");
   lines.push("Thank you.");
   return lines.join("\n");
@@ -156,7 +197,7 @@ function productCard(p){
         ${p.oldPrice ? `<span class="old-price">${fmtKES(p.oldPrice)}</span>` : ""}
       </div>
       <span class="stock-badge">${p.stock>0 ? "In stock" : "Out of stock"}</span>
-      <button class="add-btn" data-add="${p.id}">${icon("bag")} Add to cart</button>
+      <button class="add-btn" data-add="${p.id}">${icon("bag")} Buy Now</button>
     </div>
   </article>`;
 }
@@ -263,7 +304,7 @@ function renderCartDrawer(){
   if(!itemsEl) return;
   const items = Cart.read();
   if(items.length===0){
-    itemsEl.innerHTML = `<div class="cart-empty">${icon("bag")}<p style="font-weight:600;color:var(--charcoal)">Your cart is empty</p><p>Browse the shop and add products you love.</p><a href="shop.html" class="btn btn-primary btn-sm">Start shopping</a></div>`;
+    itemsEl.innerHTML = `<div class="cart-empty">${icon("bag")}<p style="font-weight:600;color:var(--charcoal)">Your order list is empty</p><p>Browse the shop and add products you love.</p><a href="shop.html" class="btn btn-primary btn-sm">Start shopping</a></div>`;
     if(summaryEl) summaryEl.style.display = "none";
     setCartStep("review");
     return;
@@ -286,8 +327,16 @@ function renderCartDrawer(){
     </div>`).join("");
 
   const subtotal = Cart.subtotal();
+  const zone = selectedZone();
+  const deliveryFee = deliveryFeeFor(zone);
+  const deliveryRow = document.querySelector(".summary-delivery-row");
+  if(deliveryRow){
+    deliveryRow.style.display = deliveryFee > 0 ? "flex" : "none";
+    const feeEl = document.querySelector(".summary-delivery");
+    if(feeEl) feeEl.textContent = deliveryFee ? fmtKES(deliveryFee) : "Free";
+  }
   document.querySelector(".summary-subtotal").textContent = fmtKES(subtotal);
-  document.querySelector(".summary-total").textContent = fmtKES(subtotal + DELIVERY_FLAT_FEE);
+  document.querySelector(".summary-total").textContent = fmtKES(subtotal + deliveryFee);
 
 }
 
@@ -308,11 +357,20 @@ function initCart(){
   document.querySelector(".scrim-cart")?.addEventListener("click", closeCart);
 
   document.querySelector("#proceed-checkout-btn")?.addEventListener("click", ()=>{
-    if(Cart.read().length===0){ toast("Your cart is empty"); return; }
+    if(Cart.read().length===0){ toast("Your order list is empty"); return; }
     setCartStep("details");
     setTimeout(()=>document.querySelector("#co-name")?.focus(), 300);
   });
   document.querySelector("#cart-back-btn")?.addEventListener("click", ()=> setCartStep("review"));
+
+  renderZoneOptions();
+  document.querySelector(".zone-options")?.addEventListener("change", (e)=>{
+    if(e.target.name !== "co-zone") return;
+    document.querySelectorAll(".zone-option").forEach(opt=>{
+      opt.classList.toggle("active", opt.querySelector('input[name="co-zone"]').checked);
+    });
+    renderCartDrawer();
+  });
 
   document.body.addEventListener("click", (e)=>{
     const addBtn = e.target.closest("[data-add]");
@@ -320,10 +378,10 @@ function initCart(){
       const p = byId(addBtn.dataset.add);
       if(p){
         Cart.add(p,1);
-        toast(`Added ${p.name} to cart`);
+        toast(`Added ${p.name} to your order list`);
         addBtn.classList.add("added");
         addBtn.innerHTML = icon("check") + " Added";
-        setTimeout(()=>{ addBtn.classList.remove("added"); addBtn.innerHTML = icon("bag") + " Add to cart"; },1400);
+        setTimeout(()=>{ addBtn.classList.remove("added"); addBtn.innerHTML = icon("bag") + " Buy Now"; },1400);
       }
     }
     const wishBtn = e.target.closest("[data-wish]");
@@ -337,7 +395,7 @@ function initCart(){
     const decBtn = e.target.closest("[data-qty-dec]");
     if(decBtn){ const it = Cart.read().find(i=>i.id===decBtn.dataset.qtyDec); if(it) Cart.setQty(it.id, it.qty-1); renderCartDrawer(); }
     const remBtn = e.target.closest("[data-remove]");
-    if(remBtn){ Cart.remove(remBtn.dataset.remove); renderCartDrawer(); toast("Removed from cart"); }
+    if(remBtn){ Cart.remove(remBtn.dataset.remove); renderCartDrawer(); toast("Removed from order list"); }
   });
 
   ["input"].forEach(evt=>{
@@ -367,7 +425,7 @@ function initCart(){
   document.querySelector("#checkout-btn")?.addEventListener("click", (e)=>{
     e.preventDefault();
     const items = Cart.read();
-    if(items.length===0){ toast("Your cart is empty"); return; }
+    if(items.length===0){ toast("Your order list is empty"); return; }
     const name = document.querySelector("#co-name")?.value.trim();
     const phone = document.querySelector("#co-phone")?.value.trim();
     const loc = document.querySelector("#co-location")?.value.trim();
@@ -385,7 +443,8 @@ function initCart(){
       phoneInput?.focus();
       return;
     }
-    const msg = buildWhatsAppMessage({name,phone,location:loc,items});
+    const zone = selectedZone();
+    const msg = buildWhatsAppMessage({name,phone,location:loc,zone,items});
     window.open(waLink(msg), "_blank");
 
     Cart.clear();
@@ -396,7 +455,15 @@ function initCart(){
     if(locInput) locInput.value = "";
     phoneInput?.classList.remove("invalid");
     phoneError?.classList.remove("show");
-    toast("Order sent! Your cart has been cleared.");
+    const defaultZoneId = zoneList()[0].id;
+    const defaultRadio = document.querySelector(`input[name="co-zone"][value="${defaultZoneId}"]`);
+    if(defaultRadio){
+      defaultRadio.checked = true;
+      document.querySelectorAll(".zone-option").forEach(opt=>{
+        opt.classList.toggle("active", opt.dataset.zoneOption === defaultZoneId);
+      });
+    }
+    toast("Order sent! Your order list has been cleared.");
   });
 
   document.addEventListener("cart:change", renderCartDrawer);
@@ -442,7 +509,7 @@ function initFaq(){
 /* ---------------- Init on every page ---------------- */
 document.addEventListener("DOMContentLoaded", ()=>{
   applyConfig();
-  document.querySelectorAll(".delivery-note").forEach(el=>{ el.textContent = ORAIMO_CONFIG.delivery.full; });
+  document.querySelectorAll(".delivery-note").forEach(el=>{ el.innerHTML = ORAIMO_CONFIG.delivery.noteHtml; });
   initHeader();
   initCart();
   initNewsletter();
