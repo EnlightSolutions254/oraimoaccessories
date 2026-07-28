@@ -27,9 +27,9 @@ const ORAIMO_CONFIG = {
   domain: "https://oraimoaccessories.co.ke",
 
   // Digits only, international format, no + or spaces (used for wa.me and tel: links)
-  whatsappNumber: "254794861886",
-  phoneNumber: "254794861886",
-  phoneDisplay: "+254 794 861 886",
+  whatsappNumber: "254712587876",
+  phoneNumber: "254712587876",
+  phoneDisplay: "+254 712 587 876",
   email: "info@oraimoaccessories.co.ke",
 
   address: {

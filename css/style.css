@@ -494,10 +494,12 @@ section{padding:72px 0;}
   display:flex;flex-direction:column;
 }
 .cart-drawer.open{transform:translateX(0);}
-.cart-head{display:flex;align-items:center;justify-content:space-between;padding:20px 22px;border-bottom:1px solid var(--line);}
-.cart-head h3{margin:0;}
-.close-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--white);display:flex;align-items:center;justify-content:center;}
+.cart-head{display:flex;align-items:center;gap:10px;padding:20px 22px;border-bottom:1px solid var(--line);}
+.cart-head h3{margin:0;flex:1;}
+.close-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--white);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .close-btn svg{width:16px;height:16px;}
+.cart-back-btn{display:none;}
+.cart-head-title-details{display:none;}
 .cart-items{flex:1;overflow-y:auto;padding:16px 22px;display:flex;flex-direction:column;gap:14px;}
 .cart-item{display:flex;gap:12px;background:var(--white);border:1px solid var(--line);border-radius:var(--radius-md);padding:12px;animation:itemIn .4s var(--ease);}
 @keyframes itemIn{from{opacity:0;transform:translateX(20px);}to{opacity:1;transform:translateX(0);}}
@@ -515,12 +517,29 @@ section{padding:72px 0;}
 .cart-empty svg{width:64px;height:64px;stroke:var(--stone-light);}
 
 
-.cart-summary{border-top:1px solid var(--line);padding:18px 22px 22px;background:var(--white);}
+.cart-summary{border-top:1px solid var(--line);padding:16px 22px 20px;background:var(--white);flex-shrink:0;}
 .summary-row{display:flex;justify-content:space-between;font-size:.86rem;color:var(--stone);margin-bottom:6px;}
-.summary-row.total{font-size:1.1rem;font-weight:700;color:var(--charcoal);margin:10px 0 16px;}
+.summary-row.total{font-size:1.1rem;font-weight:700;color:var(--charcoal);margin:10px 0 14px;}
 .delivery-note{font-size:.74rem;color:var(--stone-light);margin-bottom:14px;text-align:center;}
 
-/* ---------------- Checkout form (inline in drawer) ---------------- */
+/* ---------------- Two-step cart drawer ----------------
+   Step "review": item list gets the full scroll area; footer
+   is just totals + one CTA, so browsing the cart isn't squeezed
+   by the delivery-details form.
+   Step "details": item list is swapped out for the compact
+   name/phone/location form; reached via "Proceed to Checkout". */
+.cart-step-btn-details{display:none;}
+.cart-details-panel{display:none;}
+
+.cart-drawer[data-step="details"] .cart-items{display:none;}
+.cart-drawer[data-step="details"] .cart-details-panel{display:block;flex:1;overflow-y:auto;padding:16px 22px;}
+.cart-drawer[data-step="details"] .cart-back-btn{display:flex;}
+.cart-drawer[data-step="details"] .cart-head-title-review{display:none;}
+.cart-drawer[data-step="details"] .cart-head-title-details{display:block;}
+.cart-drawer[data-step="details"] .cart-step-btn-review{display:none;}
+.cart-drawer[data-step="details"] .cart-step-btn-details{display:inline-flex;}
+
+/* ---------------- Checkout form (details step) ---------------- */
 .field{margin-bottom:12px;}
 .field label{display:block;font-size:.76rem;font-weight:600;margin-bottom:6px;}
 .field input,.field select,.field textarea{width:100%;padding:11px 14px;border-radius:12px;border:1px solid var(--line);outline:none;font-size:.88rem;transition:border-color .2s,box-shadow .2s;}

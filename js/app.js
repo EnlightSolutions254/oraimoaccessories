@@ -265,6 +265,7 @@ function renderCartDrawer(){
   if(items.length===0){
     itemsEl.innerHTML = `<div class="cart-empty">${icon("bag")}<p style="font-weight:600;color:var(--charcoal)">Your cart is empty</p><p>Browse the shop and add products you love.</p><a href="shop.html" class="btn btn-primary btn-sm">Start shopping</a></div>`;
     if(summaryEl) summaryEl.style.display = "none";
+    setCartStep("review");
     return;
   }
   if(summaryEl) summaryEl.style.display = "block";
@@ -290,13 +291,28 @@ function renderCartDrawer(){
 
 }
 
-function openCart(){ document.querySelector(".cart-drawer")?.classList.add("open"); document.querySelector(".scrim-cart")?.classList.add("open"); renderCartDrawer(); }
+function setCartStep(step){
+  document.querySelector(".cart-drawer")?.setAttribute("data-step", step);
+  if(step === "review"){
+    // scroll the item list back to top when returning from the details step
+    document.querySelector(".cart-items")?.scrollTo({top:0});
+  }
+}
+
+function openCart(){ document.querySelector(".cart-drawer")?.classList.add("open"); document.querySelector(".scrim-cart")?.classList.add("open"); setCartStep("review"); renderCartDrawer(); }
 function closeCart(){ document.querySelector(".cart-drawer")?.classList.remove("open"); document.querySelector(".scrim-cart")?.classList.remove("open"); }
 
 function initCart(){
   document.querySelectorAll("[data-open-cart]").forEach(b=>b.addEventListener("click", openCart));
   document.querySelector(".cart-close")?.addEventListener("click", closeCart);
   document.querySelector(".scrim-cart")?.addEventListener("click", closeCart);
+
+  document.querySelector("#proceed-checkout-btn")?.addEventListener("click", ()=>{
+    if(Cart.read().length===0){ toast("Your cart is empty"); return; }
+    setCartStep("details");
+    setTimeout(()=>document.querySelector("#co-name")?.focus(), 300);
+  });
+  document.querySelector("#cart-back-btn")?.addEventListener("click", ()=> setCartStep("review"));
 
   document.body.addEventListener("click", (e)=>{
     const addBtn = e.target.closest("[data-add]");
