@@ -98,7 +98,7 @@ const ORAIMO_CONFIG = {
       { id: "syokimau-mlolongo", label: "Syokimau, Mlolongo", sub: "KSh 500–700 · confirmed on WhatsApp", fee: 500 },
       { id: "kitengela-athiriver", label: "Kitengela, Athi River", sub: "KSh 700–800 · confirmed on WhatsApp", fee: 700 },
       { id: "kikuyu-ruiru-juja", label: "Kikuyu, Ruiru, Juja", sub: "KSh 700–800 · confirmed on WhatsApp", fee: 700 },
-      { id: "custom", label: "Other towns across Kenya", sub: "Delivered nationwide via G4S Carrier", fee: 1000 }
+      { id: "custom", label: "Outside Nairobi", sub: "Delivery outside Nairobi will be charged according to the courier's rates and will be borne by the customer", fee: 0 }
     ]
   },
 
