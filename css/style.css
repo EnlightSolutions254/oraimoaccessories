@@ -1,4 +1,71 @@
 /* =========================================================
+   Self-hosted fonts (replaces the fonts.googleapis.com request)
+   ---------------------------------------------------------
+   Download the woff2 files from https://gwfh.mranftl.com/fonts
+   (search "Inter" and "Space Grotesk", Latin subset only) and
+   place them in /fonts using the filenames below — see the
+   README-fonts.md next to this file for the exact steps.
+   ========================================================= */
+
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url('../fonts/inter-400.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:500;
+  font-display:swap;
+  src:url('../fonts/inter-500.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:600;
+  font-display:swap;
+  src:url('../fonts/inter-600.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url('../fonts/inter-700.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:800;
+  font-display:swap;
+  src:url('../fonts/inter-800.woff2') format('woff2');
+}
+
+@font-face{
+  font-family:'Space Grotesk';
+  font-style:normal;
+  font-weight:500;
+  font-display:swap;
+  src:url('../fonts/space-grotesk-500.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Space Grotesk';
+  font-style:normal;
+  font-weight:600;
+  font-display:swap;
+  src:url('../fonts/space-grotesk-600.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Space Grotesk';
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url('../fonts/space-grotesk-700.woff2') format('woff2');
+}
+
+/* =========================================================
    ORAIMO KENYA — DESIGN SYSTEM
    Palette: Ink #0B0F0D · Oraimo Green #16D97A · Paper #FAFAF8
    Charcoal #14171A · Stone #6B7280 · Amber #FFB020
@@ -9,7 +76,7 @@
   --ink:#0B0F0D;
   --ink-soft:#121815;
   --green:#16D97A;
-  --green-deep:#0FAE60;
+  --green-deep:#0A7A43;
   --paper:#FAFAF8;
   --surface:#F2F4F1;
   --surface-2:#EAEDE9;
@@ -386,12 +453,12 @@ section{padding:72px 0;}
 .spotlight-card::before{content:'';position:absolute;width:260px;height:260px;background:radial-gradient(circle,var(--green),transparent 70%);opacity:.3;top:-90px;right:-70px;filter:blur(50px);z-index:0;}
 .spotlight-card::after{content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(190deg,rgba(11,15,13,.25) 0%,rgba(11,15,13,.55) 55%,rgba(11,15,13,.92) 100%);}
 .spotlight-card>*{position:relative;z-index:1;}
-.spotlight-rank{position:absolute;top:20px;right:24px;font-family:var(--font-display);font-weight:700;font-size:.78rem;letter-spacing:.06em;color:var(--green);background:rgba(22,217,122,.14);border:1px solid rgba(22,217,122,.35);padding:5px 12px;border-radius:var(--radius-pill);}
+.spotlight-rank{position:absolute;top:20px;right:24px;font-family:var(--font-display);font-weight:700;font-size:.78rem;letter-spacing:.06em;color:var(--green-deep);background:rgba(22,217,122,.14);border:1px solid rgba(22,217,122,.35);padding:5px 12px;border-radius:var(--radius-pill);}
 .spotlight-tile{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);position:relative;overflow:hidden;}
 .spotlight-tile svg{width:32px;height:32px;}
 .spotlight-card h3{color:#fff;font-size:1.3rem;margin:0;}
 .spotlight-specs{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 4px;}
-.spotlight-specs span{font-size:.76rem;font-weight:600;color:var(--green);background:rgba(22,217,122,.12);border:1px solid rgba(22,217,122,.3);padding:4px 10px;border-radius:var(--radius-pill);}
+.spotlight-specs span{font-size:.76rem;font-weight:600;color:var(--green-deep);background:rgba(22,217,122,.12);border:1px solid rgba(22,217,122,.3);padding:4px 10px;border-radius:var(--radius-pill);}
 .spotlight-price-row{display:flex;align-items:baseline;gap:10px;margin-top:auto;}
 .spotlight-price{font-family:var(--font-display);font-weight:700;font-size:1.6rem;color:#fff;}
 .spotlight-oldprice{font-size:.9rem;color:rgba(255,255,255,.45);text-decoration:line-through;}
