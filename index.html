@@ -33,10 +33,13 @@
 <meta name="msapplication-TileImage" content="images/mstile-150x150.png">
 <meta name="msapplication-config" content="browserconfig.xml">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/inter-500.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/space-grotesk-600.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/space-grotesk-700.woff2" crossorigin>
+<link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="preload" as="image" href="images/hero/home.webp" fetchpriority="high">
 
 
 <script type="application/ld+json">
@@ -121,12 +124,24 @@
 <main id="main">
 
 <section class="hero">
-  <div class="hero-slideshow" aria-hidden="true">
+  <div class="hero-slideshow" aria-hidden="true" id="hero-slideshow">
     <div class="hero-slide" style="background-image:url('images/hero/home.webp')"></div>
-    <div class="hero-slide" style="background-image:url('images/hero/about.webp')"></div>
-    <div class="hero-slide" style="background-image:url('images/hero/contact.webp')"></div>
-    <div class="hero-slide" style="background-image:url('images/hero/faq.webp')"></div>
   </div>
+  <script>
+  // The first hero slide is preloaded and renders immediately (it's the LCP element).
+  // The rest are only needed once the slideshow starts cycling, so add them after
+  // the page has finished loading instead of competing with critical resources.
+  window.addEventListener('load', function(){
+    var wrap = document.getElementById('hero-slideshow');
+    if (!wrap) return;
+    ['about','contact','faq'].forEach(function(name){
+      var d = document.createElement('div');
+      d.className = 'hero-slide';
+      d.style.backgroundImage = "url('images/hero/" + name + ".webp')";
+      wrap.appendChild(d);
+    });
+  });
+  </script>
   <div class="hero-bg">
     <div class="grid-lines"></div>
     <div class="blob blob-1"></div>
@@ -336,7 +351,7 @@
         </div>
       </div>
       <div>
-        <h4>Shop</h4>
+        <h3>Shop</h3>
         <a href="shop.html?category=powerbanks">Power Banks</a>
         <a href="shop.html?category=smartwatches">Smart Watches</a>
         <a href="shop.html?category=earbuds">Earbuds</a>
@@ -344,7 +359,7 @@
         <a href="shop.html">All Products</a>
       </div>
       <div>
-        <h4>Company</h4>
+        <h3>Company</h3>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact</a>
         <a href="faq.html">FAQ</a>
@@ -352,10 +367,12 @@
         <a href="terms.html">Terms of Service</a>
       </div>
       <div>
-        <h4>Get in touch</h4>
-        <li>📍 <span data-cfg="address.short">Information House, Mfangano Street, Nairobi</span></li>
-        <li>🕒 <span data-cfg="hours.weekday">Mon–Sat: 9:00 AM – 7:00 PM</span></li>
-        <a href="https://wa.me/254712587876" data-cfg-href="whatsapp" target="_blank" rel="noopener" data-cfg-href="whatsapp">WhatsApp: <span data-cfg="phoneDisplay">+254 712 587 876</span></a>
+        <h3>Get in touch</h3>
+        <ul style="list-style:none;padding:0;margin:0 0 10px;display:flex;flex-direction:column;gap:8px;">
+          <li>📍 <span data-cfg="address.short">Information House, Mfangano Street, Nairobi</span></li>
+          <li>🕒 <span data-cfg="hours.weekday">Mon–Sat: 9:00 AM – 7:00 PM</span></li>
+        </ul>
+        <a href="https://wa.me/254712587876" data-cfg-href="whatsapp" target="_blank" rel="noopener">WhatsApp: <span data-cfg="phoneDisplay">+254 712 587 876</span></a>
       </div>
     </div>
     <div class="footer-bottom">

@@ -1,0 +1,66 @@
+/* =========================================================
+   Self-hosted fonts (replaces the fonts.googleapis.com request)
+   ---------------------------------------------------------
+   Download the woff2 files from https://gwfh.mranftl.com/fonts
+   (search "Inter" and "Space Grotesk", Latin subset only) and
+   place them in /fonts using the filenames below — see the
+   README-fonts.md next to this file for the exact steps.
+   ========================================================= */
+
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url('../fonts/inter-400.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:500;
+  font-display:swap;
+  src:url('../fonts/inter-500.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:600;
+  font-display:swap;
+  src:url('../fonts/inter-600.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url('../fonts/inter-700.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Inter';
+  font-style:normal;
+  font-weight:800;
+  font-display:swap;
+  src:url('../fonts/inter-800.woff2') format('woff2');
+}
+
+@font-face{
+  font-family:'Space Grotesk';
+  font-style:normal;
+  font-weight:500;
+  font-display:swap;
+  src:url('../fonts/space-grotesk-500.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Space Grotesk';
+  font-style:normal;
+  font-weight:600;
+  font-display:swap;
+  src:url('../fonts/space-grotesk-600.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Space Grotesk';
+  font-style:normal;
+  font-weight:700;
+  font-display:swap;
+  src:url('../fonts/space-grotesk-700.woff2') format('woff2');
+}

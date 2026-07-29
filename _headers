@@ -1,0 +1,36 @@
+# Cloudflare Pages custom headers.
+# Docs: https://developers.cloudflare.com/pages/configuration/headers/
+#
+# Static, versioned-by-filename assets (images, fonts, css, js) are safe to
+# cache for a year — if you ever change one, rename the file (or add a
+# ?v=2 query string in the HTML) rather than overwriting it in place,
+# otherwise browsers that already cached it won't see the update.
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/videos/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML pages: always revalidate so content edits go live immediately,
+# but allow the browser to reuse a cached copy while it checks.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/manifest.json
+  Cache-Control: public, max-age=86400
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+
+/robots.txt
+  Cache-Control: public, max-age=86400
