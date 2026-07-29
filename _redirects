@@ -1,0 +1,6 @@
+# Cloudflare Pages redirects/rewrites
+# Serve the shop catalog (shop.html) at the plain domain root, so visitors
+# land straight in the product grid, but the address bar still shows just
+# oraimoaccessories.co.ke (no "/shop.html" visible). Status 200 = rewrite,
+# not a redirect, so the URL in the browser never changes.
+/    /shop.html    200
