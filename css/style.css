@@ -408,14 +408,23 @@ section{padding:72px 0;}
 .price{font-weight:700;font-size:1rem;font-variant-numeric:tabular-nums;}
 .old-price{font-size:.8rem;color:var(--stone-light);text-decoration:line-through;font-variant-numeric:tabular-nums;}
 .stock-badge{font-size:.66rem;font-weight:600;color:var(--green-deep);}
+.product-actions{margin-top:10px;display:flex;gap:8px;}
 .add-btn{
-  margin-top:10px;display:flex;align-items:center;justify-content:center;gap:6px;
+  flex:1;display:flex;align-items:center;justify-content:center;gap:6px;
   padding:10px;border-radius:var(--radius-pill);background:var(--surface);font-weight:700;font-size:.8rem;
   border:1px solid var(--line);transition:background .25s,color .25s,border-color .25s,transform .2s;
+  text-align:center;
 }
 .add-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink);}
 .add-btn.added{background:var(--green);color:var(--ink);border-color:var(--green);}
-.add-btn svg{width:15px;height:15px;}
+.add-btn svg{width:15px;height:15px;flex-shrink:0;}
+.add-btn-label{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.15;text-align:center;}
+.buy-btn{
+  flex:1;display:flex;align-items:center;justify-content:center;
+  padding:10px;border-radius:var(--radius-pill);background:var(--green);color:var(--ink);font-weight:700;font-size:.8rem;
+  border:1px solid var(--green);transition:transform .2s,box-shadow .2s;
+}
+.buy-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-green);}
 
 /* ---------------- Compact product cards on mobile ----------------
    Narrower columns were making the image square + all the text rows
@@ -433,7 +442,8 @@ section{padding:72px 0;}
   .price{font-size:.9rem;white-space:nowrap;}
   .old-price{font-size:.72rem;white-space:nowrap;}
   .stock-badge{font-size:.62rem;}
-  .add-btn{margin-top:6px;padding:8px;font-size:.76rem;}
+  .product-actions{margin-top:6px;gap:6px;}
+  .add-btn,.buy-btn{padding:8px;font-size:.76rem;}
 }
 
 

@@ -196,7 +196,10 @@ function productCard(p){
         ${p.oldPrice ? `<span class="old-price">${fmtKES(p.oldPrice)}</span>` : ""}
       </div>
       <span class="stock-badge">${p.stock>0 ? "In stock" : "Out of stock"}</span>
-      <button class="add-btn" data-add="${p.id}">${icon("bag")} Buy Now</button>
+      <div class="product-actions">
+        <button class="add-btn" data-add="${p.id}">${icon("bag")} <span class="add-btn-label">Add to<br>Cart</span></button>
+        <button class="buy-btn" data-buy="${p.id}">Buy Now</button>
+      </div>
     </div>
   </article>`;
 }
@@ -347,19 +350,25 @@ function setCartStep(step){
   }
 }
 
-function openCart(){ document.querySelector(".cart-drawer")?.classList.add("open"); document.querySelector(".scrim-cart")?.classList.add("open"); setCartStep("review"); renderCartDrawer(); }
+function openCart(step){ document.querySelector(".cart-drawer")?.classList.add("open"); document.querySelector(".scrim-cart")?.classList.add("open"); setCartStep(step || "review"); renderCartDrawer(); }
 function closeCart(){ document.querySelector(".cart-drawer")?.classList.remove("open"); document.querySelector(".scrim-cart")?.classList.remove("open"); }
 
+/* Opens the cart drawer straight to the Delivery Details / checkout step
+   (skipping the "My Orders" review step) and focuses the name field.
+   Used by the header/footer "Proceed to Checkout" button and by every
+   "Buy Now" button (grid cards + product detail page). */
+function goToCheckoutStep(){
+  if(Cart.read().length===0){ toast("Your order list is empty"); return; }
+  openCart("details");
+  setTimeout(()=>document.querySelector("#co-name")?.focus(), 300);
+}
+
 function initCart(){
-  document.querySelectorAll("[data-open-cart]").forEach(b=>b.addEventListener("click", openCart));
+  document.querySelectorAll("[data-open-cart]").forEach(b=>b.addEventListener("click", ()=>openCart()));
   document.querySelector(".cart-close")?.addEventListener("click", closeCart);
   document.querySelector(".scrim-cart")?.addEventListener("click", closeCart);
 
-  document.querySelector("#proceed-checkout-btn")?.addEventListener("click", ()=>{
-    if(Cart.read().length===0){ toast("Your order list is empty"); return; }
-    setCartStep("details");
-    setTimeout(()=>document.querySelector("#co-name")?.focus(), 300);
-  });
+  document.querySelector("#proceed-checkout-btn")?.addEventListener("click", goToCheckoutStep);
   document.querySelector("#cart-back-btn")?.addEventListener("click", ()=> setCartStep("review"));
 
   renderZoneOptions();
@@ -380,7 +389,15 @@ function initCart(){
         toast(`Added ${p.name} to your order list`);
         addBtn.classList.add("added");
         addBtn.innerHTML = icon("check") + " Added";
-        setTimeout(()=>{ addBtn.classList.remove("added"); addBtn.innerHTML = icon("bag") + " Buy Now"; },1400);
+        setTimeout(()=>{ addBtn.classList.remove("added"); addBtn.innerHTML = icon("bag") + ' <span class="add-btn-label">Add to<br>Cart</span>'; },1400);
+      }
+    }
+    const buyBtn = e.target.closest("[data-buy]");
+    if(buyBtn){
+      const p = byId(buyBtn.dataset.buy);
+      if(p){
+        Cart.add(p,1);
+        goToCheckoutStep();
       }
     }
     const wishBtn = e.target.closest("[data-wish]");
