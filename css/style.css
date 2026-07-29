@@ -767,7 +767,7 @@ section{padding:72px 0;}
   .trust-bar-track{display:flex;flex-wrap:nowrap;flex-shrink:0;}
   .trust-bar-track[aria-hidden]{display:flex;}
   .trust-bar-item{
-    font-size:.78rem;padding:0 20px;width:auto;white-space:nowrap;flex-shrink:0;
+    font-size:.78rem;padding:0 12px;width:auto;white-space:nowrap;flex-shrink:0;
     border-bottom:none !important;border-right:1px solid var(--line) !important;
   }
   .trust-bar-icon{width:28px;height:28px;}
