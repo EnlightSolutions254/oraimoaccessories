@@ -739,15 +739,47 @@ section{padding:72px 0;}
   color:var(--amber-deep,#B8790F);
   box-shadow:0 6px 18px rgba(255,176,32,.28);
 }
-@media (max-width:900px){
-  .trust-bar-item{padding:0 18px;}
+/* .trust-bar-scroller/.trust-bar-track only exist to power the marquee below.
+   At laptop sizes and up (1024px+, same cutoff the site already uses to
+   switch from the hamburger to the full nav) they're transparent to layout
+   (display:contents) so the four .trust-bar-item children sit directly in
+   the .trust-bar flex row exactly as before; the duplicate (aria-hidden)
+   track stays hidden. */
+.trust-bar-scroller{display:contents;}
+.trust-bar-track{display:contents;}
+.trust-bar-track[aria-hidden]{display:none;}
+@media (max-width:1023px){
+  /* Phones and tablets: instead of wrapping/stacking the 4 lines into
+     multiple rows, run them as a single-line ticker that auto-scrolls
+     right to left, so the bar only ever takes up one row's worth of height.
+     Only true laptop-and-up screens (see .trust-bar-scroller above) keep
+     the static row. */
+  .trust-bar{
+    padding:14px 0;gap:0;justify-content:flex-start;flex-wrap:nowrap;
+    overflow:hidden;position:relative;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 20px,#000 calc(100% - 20px),transparent 100%);
+    mask-image:linear-gradient(90deg,transparent 0,#000 20px,#000 calc(100% - 20px),transparent 100%);
+  }
+  .trust-bar-scroller{
+    display:flex;width:max-content;flex-shrink:0;
+    animation:trustBarMarquee 22s linear infinite;
+  }
+  .trust-bar-track{display:flex;flex-wrap:nowrap;flex-shrink:0;}
+  .trust-bar-track[aria-hidden]{display:flex;}
+  .trust-bar-item{
+    font-size:.78rem;padding:0 20px;width:auto;white-space:nowrap;flex-shrink:0;
+    border-bottom:none !important;border-right:1px solid var(--line) !important;
+  }
+  .trust-bar-icon{width:28px;height:28px;}
+  .trust-bar-icon svg{width:13px;height:13px;}
 }
-@media (max-width:639px){
-  .trust-bar{padding:16px 18px;gap:16px 0;justify-content:flex-start;}
-  .trust-bar-item{font-size:.78rem;padding:0 0 14px;width:100%;border-right:none !important;border-bottom:1px solid var(--line);}
-  .trust-bar-item:last-child{border-bottom:none;padding-bottom:0;}
-  .trust-bar-icon{width:32px;height:32px;}
-  .trust-bar-icon svg{width:15px;height:15px;}
+@keyframes trustBarMarquee{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+@media (max-width:1023px) and (prefers-reduced-motion:reduce){
+  .trust-bar-scroller{animation:none;}
+  .trust-bar{overflow-x:auto;-webkit-overflow-scrolling:touch;}
 }
 .breadcrumbs a:hover{color:var(--green-deep);}
 
