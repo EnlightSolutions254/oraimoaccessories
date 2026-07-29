@@ -417,6 +417,25 @@ section{padding:72px 0;}
 .add-btn.added{background:var(--green);color:var(--ink);border-color:var(--green);}
 .add-btn svg{width:15px;height:15px;}
 
+/* ---------------- Compact product cards on mobile ----------------
+   Narrower columns were making the image square + all the text rows
+   (category, 2-line name, rating, price, old price, stock, button)
+   stack into a tall card. This tightens spacing and stops the price
+   row from wrapping onto two lines, without touching desktop/tablet. */
+@media (max-width:639px){
+  .product-grid{gap:12px;}
+  .product-media{aspect-ratio:4/3;}
+  .product-info{padding:10px 10px 12px;gap:4px;}
+  .product-cat{font-size:.62rem;}
+  .product-name{font-size:.82rem;line-height:1.25;min-height:2.05em;}
+  .product-rating{font-size:.7rem;}
+  .product-price-row{flex-wrap:nowrap;gap:6px;margin-top:2px;}
+  .price{font-size:.9rem;white-space:nowrap;}
+  .old-price{font-size:.72rem;white-space:nowrap;}
+  .stock-badge{font-size:.62rem;}
+  .add-btn{margin-top:6px;padding:8px;font-size:.76rem;}
+}
+
 
 /* ---------------- Reveal animations ---------------- */
 [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
