@@ -98,21 +98,47 @@
 <h1 class="sr-only">Shop all Oraimo products</h1>
 <section class="container" style="padding-top:calc(var(--header-h) + 20px);padding-bottom:8px;">
   <div class="trust-bar">
-    <div class="trust-bar-item" data-reveal>
-      <span class="trust-bar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5L7 21l5-2.5L17 21l-1.5-6.5"/></svg></span>
-      <span><strong>Original Oraimo Products</strong> with 1-Year Warranty</span>
-    </div>
-    <div class="trust-bar-item" data-reveal>
-      <span class="trust-bar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="7" width="12" height="9" rx="1.5"/><path d="M13.5 10h4l3 3v3h-7z"/><circle cx="6" cy="18.5" r="1.6"/><circle cx="16.5" cy="18.5" r="1.6"/></svg></span>
-      <span><strong>Same-Day Delivery</strong> within Nairobi</span>
-    </div>
-    <div class="trust-bar-item" data-reveal>
-      <span class="trust-bar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.5 12a2.5 2.5 0 1 0 5 0 2.5 2.5 0 1 0-5 0z"/><path d="M6 9v.01M6 15v.01M18 9v.01M18 15v.01"/></svg></span>
-      <span><strong>Pay on Delivery</strong> available within Nairobi</span>
-    </div>
-    <div class="trust-bar-item" data-reveal>
-      <span class="trust-bar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/></svg></span>
-      <span><strong>1&ndash;2 Days Delivery</strong> outside Nairobi</span>
+    <div class="trust-bar-scroller">
+      <div class="trust-bar-track">
+        <div class="trust-bar-item" data-reveal>
+          <span class="trust-bar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5L7 21l5-2.5L17 21l-1.5-6.5"/></svg></span>
+          <span><strong>Original Oraimo Products</strong> with 1-Year Warranty</span>
+        </div>
+        <div class="trust-bar-item" data-reveal>
+          <span class="trust-bar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="7" width="12" height="9" rx="1.5"/><path d="M13.5 10h4l3 3v3h-7z"/><circle cx="6" cy="18.5" r="1.6"/><circle cx="16.5" cy="18.5" r="1.6"/></svg></span>
+          <span><strong>Same-Day Delivery</strong> within Nairobi</span>
+        </div>
+        <div class="trust-bar-item" data-reveal>
+          <span class="trust-bar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.5 12a2.5 2.5 0 1 0 5 0 2.5 2.5 0 1 0-5 0z"/><path d="M6 9v.01M6 15v.01M18 9v.01M18 15v.01"/></svg></span>
+          <span><strong>Pay on Delivery</strong> available within Nairobi</span>
+        </div>
+        <div class="trust-bar-item" data-reveal>
+          <span class="trust-bar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/></svg></span>
+          <span><strong>1&ndash;2 Days Delivery</strong> outside Nairobi</span>
+        </div>
+      </div>
+      <!-- Exact duplicate of the track above, used only for the seamless right-to-left
+           mobile/tablet ticker (see .trust-bar-scroller in style.css). Hidden from screen
+           readers and hidden entirely at laptop sizes and up, where the bar reverts to the
+           normal static row — same technique as .chip-marquee. -->
+      <div class="trust-bar-track" aria-hidden="true">
+        <div class="trust-bar-item">
+          <span class="trust-bar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5L7 21l5-2.5L17 21l-1.5-6.5"/></svg></span>
+          <span><strong>Original Oraimo Products</strong> with 1-Year Warranty</span>
+        </div>
+        <div class="trust-bar-item">
+          <span class="trust-bar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="7" width="12" height="9" rx="1.5"/><path d="M13.5 10h4l3 3v3h-7z"/><circle cx="6" cy="18.5" r="1.6"/><circle cx="16.5" cy="18.5" r="1.6"/></svg></span>
+          <span><strong>Same-Day Delivery</strong> within Nairobi</span>
+        </div>
+        <div class="trust-bar-item">
+          <span class="trust-bar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.5 12a2.5 2.5 0 1 0 5 0 2.5 2.5 0 1 0-5 0z"/><path d="M6 9v.01M6 15v.01M18 9v.01M18 15v.01"/></svg></span>
+          <span><strong>Pay on Delivery</strong> available within Nairobi</span>
+        </div>
+        <div class="trust-bar-item">
+          <span class="trust-bar-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15l2 2 4-4"/></svg></span>
+          <span><strong>1&ndash;2 Days Delivery</strong> outside Nairobi</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
