@@ -1,5 +1,5 @@
 /* =========================================================
-   Oraimo Accessories Kenya — SITE CONFIGURATION
+   Oraimo shop Mfangano street, Nairobi — SITE CONFIGURATION
    ---------------------------------------------------------
    This is the ONLY file that should contain business details
    (name, contact numbers, address, hours, warranty, delivery,
@@ -17,8 +17,8 @@
    + robots.txt so search engines see the same values too.
    ========================================================= */
 const ORAIMO_CONFIG = {
-  businessName: "Oraimo Accessories Kenya",
-  legalName: "Oraimo Accessories Kenya",
+  businessName: "Oraimo shop Mfangano street, Nairobi",
+  legalName: "Oraimo shop Mfangano street, Nairobi",
   shortName: "Oraimo Accessories",
   tagline: "Original Oraimo Accessories & Appliances",
   description: "We sell genuine Oraimo chargers, power banks, earbuds, headphones, smartwatches, home appliances, grooming products, speakers and accessories.",
@@ -83,11 +83,22 @@ const ORAIMO_CONFIG = {
     // customer types their exact location separately in "Delivery location".
     zones: [
       { id: "cbd", label: "Nairobi CBD", sub: "Delivered within 24 hours", fee: 0 },
-      { id: "near", label: "Westlands, Upperhill, South B / South C, Ngara", sub: "Delivery fee confirmed on WhatsApp", fee: 150 },
-      { id: "mid", label: "Kilimani, Lavington, Eastleigh, Kasarani, Embakasi", sub: "Delivery fee confirmed on WhatsApp", fee: 200 },
-      { id: "outer", label: "Karen, Langata, Runda, Ruaka, Roysambu, Donholm", sub: "Delivery fee confirmed on WhatsApp", fee: 300 },
-      { id: "satellite", label: "Ngong, Rongai, Kikuyu, Ruiru, Kitengela, Athi River", sub: "Delivery fee confirmed on WhatsApp", fee: 400 },
-      { id: "custom", label: "Other location", sub: "Not listed above? Add it under Delivery location below", fee: 500 }
+      { id: "ngara-upperhill", label: "Ngara, Upper Hill", sub: "KSh 150–200 · confirmed on WhatsApp", fee: 150 },
+      { id: "westlands-parklands", label: "Westlands, Parklands", sub: "Flat delivery fee", fee: 250 },
+      { id: "kilimani-lavington", label: "Kilimani, Kileleshwa, Lavington", sub: "Flat delivery fee", fee: 300 },
+      { id: "southb-southc", label: "South B, South C", sub: "Flat delivery fee", fee: 300 },
+      { id: "eastleigh", label: "Eastleigh", sub: "KSh 250–300 · confirmed on WhatsApp", fee: 250 },
+      { id: "langata", label: "Lang'ata", sub: "Flat delivery fee", fee: 350 },
+      { id: "donholm-buruburu-umoja", label: "Donholm, Buruburu, Umoja", sub: "Flat delivery fee", fee: 350 },
+      { id: "embakasi", label: "Embakasi", sub: "Flat delivery fee", fee: 400 },
+      { id: "kasarani-roysambu", label: "Kasarani, Roysambu", sub: "Flat delivery fee", fee: 400 },
+      { id: "ruaka", label: "Ruaka", sub: "Flat delivery fee", fee: 450 },
+      { id: "kahawa-githurai", label: "Kahawa West, Githurai", sub: "KSh 450–500 · confirmed on WhatsApp", fee: 450 },
+      { id: "karen", label: "Karen", sub: "KSh 500–700 · confirmed on WhatsApp", fee: 500 },
+      { id: "syokimau-mlolongo", label: "Syokimau, Mlolongo", sub: "KSh 500–700 · confirmed on WhatsApp", fee: 500 },
+      { id: "kitengela-athiriver", label: "Kitengela, Athi River", sub: "KSh 700–800 · confirmed on WhatsApp", fee: 700 },
+      { id: "kikuyu-ruiru-juja", label: "Kikuyu, Ruiru, Juja", sub: "KSh 700–800 · confirmed on WhatsApp", fee: 700 },
+      { id: "custom", label: "Other towns across Kenya", sub: "Delivered nationwide via G4S Carrier", fee: 1000 }
     ]
   },
 

@@ -1,5 +1,5 @@
 /* =========================================================
-   Oraimo Accessories Kenya — shared app logic
+   Oraimo shop Mfangano street, Nairobi — shared app logic
    Business details (WhatsApp number, name, etc.) live in ONE
    place: config.js (ORAIMO_CONFIG). Edit that file, not this one.
    ========================================================= */
@@ -132,7 +132,7 @@ function toast(msg){
 function fmtKESPlain(n){
   return "KES " + Math.round(Number(n));
 }
-function buildWhatsAppMessage({name, phone, location:loc, zone, items}){
+function buildWhatsAppMessage({name, phone, zone, items}){
   let lines = [];
   lines.push(`Hello ${STORE_NAME}`);
   lines.push("I would like to place the following order.");
@@ -155,7 +155,6 @@ function buildWhatsAppMessage({name, phone, location:loc, zone, items}){
   lines.push("*DELIVERY DETAILS*");
   lines.push(`Name: ${name || "Not provided"}`);
   lines.push(`Phone: ${phone || "Not provided"}`);
-  lines.push(`Location: ${loc || "Not provided"}`);
   lines.push(`Zone: ${zoneLabel}`);
   lines.push("");
   lines.push("Thank you.");
@@ -401,7 +400,6 @@ function initCart(){
   ["input"].forEach(evt=>{
     document.querySelector("#co-name")?.addEventListener(evt, renderCartDrawer);
     document.querySelector("#co-phone")?.addEventListener(evt, renderCartDrawer);
-    document.querySelector("#co-location")?.addEventListener(evt, renderCartDrawer);
   });
 
   const phoneInput = document.querySelector("#co-phone");
@@ -428,10 +426,9 @@ function initCart(){
     if(items.length===0){ toast("Your order list is empty"); return; }
     const name = document.querySelector("#co-name")?.value.trim();
     const phone = document.querySelector("#co-phone")?.value.trim();
-    const loc = document.querySelector("#co-location")?.value.trim();
-    if(!name || !loc){
-      toast("Please fill in your name & delivery location");
-      document.querySelector(!name ? "#co-name" : "#co-location")?.focus();
+    if(!name){
+      toast("Please fill in your name");
+      document.querySelector("#co-name")?.focus();
       return;
     }
     if(!isValidKenyanPhone(phone)){
@@ -444,15 +441,13 @@ function initCart(){
       return;
     }
     const zone = selectedZone();
-    const msg = buildWhatsAppMessage({name,phone,location:loc,zone,items});
+    const msg = buildWhatsAppMessage({name,phone,zone,items});
     window.open(waLink(msg), "_blank");
 
     Cart.clear();
     const nameInput = document.querySelector("#co-name");
-    const locInput = document.querySelector("#co-location");
     if(nameInput) nameInput.value = "";
     if(phoneInput) phoneInput.value = "";
-    if(locInput) locInput.value = "";
     phoneInput?.classList.remove("invalid");
     phoneError?.classList.remove("show");
     const defaultZoneId = zoneList()[0].id;

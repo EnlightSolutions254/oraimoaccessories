@@ -1,4 +1,4 @@
-// Oraimo Accessories Kenya — product database (edit this file to add/update products)
+// Oraimo shop Mfangano street, Nairobi — product database (edit this file to add/update products)
 const ORAIMO_DATA = {
   "categories": [
     {
@@ -120,7 +120,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Power Banks",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 3,
       "rating": 4.3,
@@ -159,7 +159,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Power Banks",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 10,
       "rating": 4.3,
@@ -196,7 +196,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Power Banks",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 17,
       "rating": 4.4,
@@ -234,7 +234,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Power Banks",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 24,
       "rating": 4.5,
@@ -271,7 +271,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Power Banks",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 31,
       "rating": 4.5,
@@ -308,7 +308,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Power Banks",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 38,
       "rating": 4.5,
@@ -347,7 +347,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Power Banks",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 5,
       "rating": 4.6,
@@ -387,7 +387,7 @@ const ORAIMO_DATA = {
         "Capacity": "30,000mAh",
         "Output": "22.5W fast charging",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 14,
       "rating": 4.7,
@@ -424,7 +424,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Smart Watches",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 12,
       "rating": 4.6,
@@ -461,7 +461,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Smart Watches",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 19,
       "rating": 4.7,
@@ -499,7 +499,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Smart Watches",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 26,
       "rating": 4.8,
@@ -537,7 +537,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Smart Watches",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 33,
       "rating": 4.8,
@@ -575,7 +575,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Smart Watches",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 40,
       "rating": 4.8,
@@ -614,7 +614,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Smart Watches",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 7,
       "rating": 4.3,
@@ -652,7 +652,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Smart Watches",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 14,
       "rating": 4.3,
@@ -690,7 +690,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Smart Watches",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 21,
       "rating": 4.4,
@@ -727,7 +727,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Smart Watches",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 28,
       "rating": 4.5,
@@ -764,7 +764,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earbuds",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 35,
       "rating": 4.5,
@@ -803,7 +803,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earbuds",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 42,
       "rating": 4.5,
@@ -840,7 +840,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earbuds",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 9,
       "rating": 4.6,
@@ -879,7 +879,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earbuds",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 16,
       "rating": 4.6,
@@ -916,7 +916,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earbuds",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 23,
       "rating": 4.7,
@@ -953,7 +953,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earbuds",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 30,
       "rating": 4.8,
@@ -990,7 +990,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earbuds",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 37,
       "rating": 4.8,
@@ -1027,7 +1027,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earbuds",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 4,
       "rating": 4.8,
@@ -1065,7 +1065,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earbuds",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 11,
       "rating": 4.3,
@@ -1103,7 +1103,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Open Ear Earbuds",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 18,
       "rating": 4.3,
@@ -1139,7 +1139,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Open Ear Earbuds",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 25,
       "rating": 4.4,
@@ -1176,7 +1176,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Open Ear Earbuds",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 32,
       "rating": 4.5,
@@ -1212,7 +1212,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Open Ear Earbuds",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 39,
       "rating": 4.5,
@@ -1248,7 +1248,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Headphones",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 6,
       "rating": 4.5,
@@ -1283,7 +1283,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Headphones",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 13,
       "rating": 4.6,
@@ -1318,7 +1318,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Headphones",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 20,
       "rating": 4.6,
@@ -1353,7 +1353,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Neckbands",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 27,
       "rating": 4.7,
@@ -1387,7 +1387,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Neckbands",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 34,
       "rating": 4.8,
@@ -1422,7 +1422,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earphones & Cables",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 41,
       "rating": 4.8,
@@ -1459,7 +1459,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earphones & Cables",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 8,
       "rating": 4.8,
@@ -1496,7 +1496,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earphones & Cables",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 15,
       "rating": 4.3,
@@ -1533,7 +1533,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earphones & Cables",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 22,
       "rating": 4.3,
@@ -1572,7 +1572,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earphones & Cables",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 29,
       "rating": 4.4,
@@ -1609,7 +1609,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earphones & Cables",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 36,
       "rating": 4.5,
@@ -1647,7 +1647,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earphones & Cables",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 3,
       "rating": 4.5,
@@ -1685,7 +1685,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Earphones & Cables",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 10,
       "rating": 4.5,
@@ -1722,7 +1722,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Chargers",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 17,
       "rating": 4.6,
@@ -1759,7 +1759,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Chargers",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 24,
       "rating": 4.6,
@@ -1796,7 +1796,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Chargers",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 31,
       "rating": 4.7,
@@ -1834,7 +1834,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Chargers",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 38,
       "rating": 4.8,
@@ -1872,7 +1872,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Chargers",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 5,
       "rating": 4.8,
@@ -1910,7 +1910,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Chargers",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 12,
       "rating": 4.8,
@@ -1949,7 +1949,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Chargers",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 19,
       "rating": 4.3,
@@ -1986,7 +1986,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Car Chargers",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 26,
       "rating": 4.3,
@@ -2018,7 +2018,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Power Stations",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 33,
       "rating": 4.4,
@@ -2050,7 +2050,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Data Cables",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 40,
       "rating": 4.5,
@@ -2087,7 +2087,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Data Cables",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 7,
       "rating": 4.5,
@@ -2123,7 +2123,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Data Cables",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 14,
       "rating": 4.5,
@@ -2159,7 +2159,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Data Cables",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 21,
       "rating": 4.6,
@@ -2196,7 +2196,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Bluetooth Speakers",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 28,
       "rating": 4.6,
@@ -2231,7 +2231,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Bluetooth Speakers",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 35,
       "rating": 4.7,
@@ -2265,7 +2265,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "MiFi",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 42,
       "rating": 4.8,
@@ -2298,7 +2298,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Grooming",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 9,
       "rating": 4.8,
@@ -2336,7 +2336,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Grooming",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 16,
       "rating": 4.8,
@@ -2373,7 +2373,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Grooming",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 23,
       "rating": 4.3,
@@ -2410,7 +2410,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Grooming",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 30,
       "rating": 4.3,
@@ -2448,7 +2448,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Grooming",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 37,
       "rating": 4.4,
@@ -2485,7 +2485,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Grooming",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 4,
       "rating": 4.5,
@@ -2522,7 +2522,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Grooming",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 11,
       "rating": 4.5,
@@ -2559,7 +2559,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Lifestyle",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 18,
       "rating": 4.5,
@@ -2595,7 +2595,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Lifestyle",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 25,
       "rating": 4.6,
@@ -2631,7 +2631,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Lifestyle",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 32,
       "rating": 4.6,
@@ -2668,7 +2668,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Lifestyle",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 39,
       "rating": 4.7,
@@ -2704,7 +2704,7 @@ const ORAIMO_DATA = {
         "Brand": "Oraimo",
         "Category": "Home Appliances",
         "Warranty": "Up to 1 Year Official Warranty",
-        "Origin": "Authorized Oraimo Accessories Kenya dealer"
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
       "stock": 6,
       "rating": 4.8,

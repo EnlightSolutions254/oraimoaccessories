@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Terms of Service — Oraimo Accessories Kenya</title>
-<meta name="description" content="The terms governing orders, pricing, payment, warranty and returns at Oraimo Accessories Kenya.">
+<title>Terms of Service — Oraimo shop Mfangano street, Nairobi</title>
+<meta name="description" content="The terms governing orders, pricing, payment, warranty and returns at Oraimo shop Mfangano street, Nairobi.">
 <link rel="canonical" href="https://oraimoaccessories.co.ke/terms.html">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0B0F0D">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Terms of Service — Oraimo Accessories Kenya">
-<meta property="og:description" content="The terms governing orders, pricing, payment, warranty and returns at Oraimo Accessories Kenya.">
+<meta property="og:title" content="Terms of Service — Oraimo shop Mfangano street, Nairobi">
+<meta property="og:description" content="The terms governing orders, pricing, payment, warranty and returns at Oraimo shop Mfangano street, Nairobi.">
 <meta property="og:url" content="https://oraimoaccessories.co.ke/terms.html">
-<meta property="og:site_name" content="Oraimo Accessories Kenya">
+<meta property="og:site_name" content="Oraimo shop Mfangano street, Nairobi">
 <meta property="og:image" content="https://oraimoaccessories.co.ke/images/og-home.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Oraimo Accessories Kenya">
+<meta property="og:image:alt" content="Oraimo shop Mfangano street, Nairobi">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Terms of Service — Oraimo Accessories Kenya">
-<meta name="twitter:description" content="The terms governing orders, pricing, payment, warranty and returns at Oraimo Accessories Kenya.">
+<meta name="twitter:title" content="Terms of Service — Oraimo shop Mfangano street, Nairobi">
+<meta name="twitter:description" content="The terms governing orders, pricing, payment, warranty and returns at Oraimo shop Mfangano street, Nairobi.">
 <meta name="twitter:image" content="https://oraimoaccessories.co.ke/images/og-home.png">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><path fill=%22%2316D97A%22 d=%22M13 2 4 14h6l-1 8 9-12h-6z%22/></svg>">
@@ -47,7 +47,7 @@
   <div class="container header-inner">
     <a href="index.html" class="logo">
       <span class="logo-mark">
-        <img src="images/logo.png" width="32" height="32" alt="Oraimo Accessories Kenya logo" loading="eager">
+        <img src="images/logo.png" width="32" height="32" alt="Oraimo shop Mfangano street, Nairobi logo" loading="eager">
       </span>
       <span>Oraimo Accessories</span>
     </a>
@@ -120,7 +120,7 @@
     <div class="footer-grid">
       <div>
         <a href="index.html" class="logo" style="margin-bottom:14px;">
-          <span class="logo-mark"><img src="images/logo.png" width="32" height="32" alt="Oraimo Accessories Kenya logo" loading="lazy"></span>
+          <span class="logo-mark"><img src="images/logo.png" width="32" height="32" alt="Oraimo shop Mfangano street, Nairobi logo" loading="lazy"></span>
           <span style="color:#fff;">Oraimo Accessories</span>
         </a>
         <p style="max-width:320px;font-size:.9rem;">Genuine Oraimo chargers, power banks, earbuds, headphones, smartwatches, home appliances, grooming products and speakers — delivered across Kenya, ordered straight through WhatsApp.</p>
@@ -156,7 +156,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span id="year"></span> Oraimo Accessories Kenya. All rights reserved.</span>
+      <span>© <span id="year"></span> Oraimo shop Mfangano street, Nairobi. All rights reserved.</span>
       <span>An independent authorized Oraimo accessories retailer in Kenya.</span>
     </div>
   </div>
@@ -201,15 +201,20 @@
       <input type="tel" id="co-phone" inputmode="tel" autocomplete="tel" maxlength="13" placeholder="07XX XXX XXX">
       <span class="field-error" id="co-phone-error">Enter a valid Kenyan mobile number, e.g. 0712 345 678</span>
     </div>
-    <div class="field">
-      <label for="co-location">Delivery location</label>
-      <input type="text" id="co-location" placeholder="e.g. Westlands, Nairobi">
+    <div class="field zone-field">
+      <div class="zone-field-head">
+        <label>Delivery area</label>
+        <span class="zone-field-hint">Pick the option nearest you</span>
+      </div>
+      <!-- Populated by app.js (renderZoneOptions) from ORAIMO_CONFIG.delivery.zones
+           in config.js — add, rename, or re-price zones there, not here. -->
+      <div class="zone-options"></div>
     </div>
-    <p class="delivery-note">Free delivery within Nairobi CBD. Delivery fee for other areas is confirmed with you on WhatsApp.</p>
   </div>
 
   <div class="cart-summary">
     <div class="summary-row"><span>Subtotal</span><span class="summary-subtotal">KES 0</span></div>
+    <div class="summary-row summary-delivery-row" style="display:none;"><span>Delivery</span><span class="summary-delivery">KES 0</span></div>
     <div class="summary-row total"><span>Total</span><span class="summary-total">KES 0</span></div>
 
     <button class="btn btn-accent btn-block cart-step-btn-review" id="proceed-checkout-btn">
