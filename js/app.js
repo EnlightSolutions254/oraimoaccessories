@@ -207,7 +207,7 @@ function productCard(p){
       </div>
       <span class="stock-badge">${p.stock>0 ? "In stock" : "Out of stock"}</span>
       <div class="product-actions">
-        <button class="add-btn" data-add="${p.id}">${icon("bag")} Order</button>
+        <button class="add-btn" data-add="${p.id}">${icon("bag")} Add to Cart</button>
         <button class="buy-btn" data-buy="${p.id}">Buy Now</button>
       </div>
     </div>
@@ -399,7 +399,7 @@ function initCart(){
         toast(`Added ${p.name} to your order list`);
         addBtn.classList.add("added");
         addBtn.innerHTML = icon("check") + " Added";
-        setTimeout(()=>{ addBtn.classList.remove("added"); addBtn.innerHTML = icon("bag") + " Order"; },1400);
+        setTimeout(()=>{ addBtn.classList.remove("added"); addBtn.innerHTML = icon("bag") + " Add to Cart"; },1400);
       }
     }
     const buyBtn = e.target.closest("[data-buy]");
