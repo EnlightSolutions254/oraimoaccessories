@@ -39,8 +39,16 @@ function renderZoneOptions(){
         <span class="zone-option-title">${z.label}</span>
         <span class="zone-option-sub">${z.sub}</span>
       </span>
-      <span class="zone-option-fee${z.fee===0 ? " zone-option-fee-free" : ""}">${z.fee===0 ? "Free" : "+ " + fmtKES(z.fee)}</span>
+      <span class="zone-option-fee${zoneFeeLabel(z)==="Free" ? " zone-option-fee-free" : ""}">${zoneFeeLabel(z)}</span>
     </label>`).join("");
+}
+/* Text shown for a zone's fee. Normally "Free" when fee is 0, or "+ KES n"
+   otherwise — but a zone can set feeLabel (e.g. "" ) to override that, for
+   cases where fee:0 doesn't mean genuinely free (see "custom" zone in
+   config.js, where the real cost is set by the courier). */
+function zoneFeeLabel(z){
+  if(z.feeLabel !== undefined) return z.feeLabel;
+  return z.fee===0 ? "Free" : "+ " + fmtKES(z.fee);
 }
 
 /* ---------------- Utilities ---------------- */
@@ -148,8 +156,10 @@ function buildWhatsAppMessage({name, phone, zone, items}){
   const subtotal = items.reduce((s,i)=>s+i.qty*i.price,0);
   const deliveryFee = deliveryFeeFor(zone);
   const zoneLabel = zoneLabelFor(zone);
+  const zoneFee = zoneById(zone);
+  const deliveryFeeText = zoneFee.feeLabel !== undefined ? zoneFee.feeLabel : (deliveryFee ? fmtKESPlain(deliveryFee) : "Free");
   lines.push(`Subtotal: ${fmtKESPlain(subtotal)}`);
-  lines.push(`Delivery (${zoneLabel}): ${deliveryFee ? fmtKESPlain(deliveryFee) : "Free"}`);
+  lines.push(`Delivery (${zoneLabel}): ${deliveryFeeText}`);
   lines.push(`*TOTAL: ${fmtKESPlain(subtotal + deliveryFee)}*`);
   lines.push("");
   lines.push("*DELIVERY DETAILS*");

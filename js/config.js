@@ -83,22 +83,25 @@ const ORAIMO_CONFIG = {
     // customer types their exact location separately in "Delivery location".
     zones: [
       { id: "cbd", label: "Nairobi CBD", sub: "Delivered within 24 hours", fee: 0 },
-      { id: "ngara-upperhill", label: "Ngara, Upper Hill", sub: "KSh 150–200 · confirmed on WhatsApp", fee: 150 },
-      { id: "westlands-parklands", label: "Westlands, Parklands", sub: "Flat delivery fee", fee: 250 },
-      { id: "kilimani-lavington", label: "Kilimani, Kileleshwa, Lavington", sub: "Flat delivery fee", fee: 300 },
-      { id: "southb-southc", label: "South B, South C", sub: "Flat delivery fee", fee: 300 },
-      { id: "eastleigh", label: "Eastleigh", sub: "KSh 250–300 · confirmed on WhatsApp", fee: 250 },
-      { id: "langata", label: "Lang'ata", sub: "Flat delivery fee", fee: 350 },
-      { id: "donholm-buruburu-umoja", label: "Donholm, Buruburu, Umoja", sub: "Flat delivery fee", fee: 350 },
-      { id: "embakasi", label: "Embakasi", sub: "Flat delivery fee", fee: 400 },
-      { id: "kasarani-roysambu", label: "Kasarani, Roysambu", sub: "Flat delivery fee", fee: 400 },
-      { id: "ruaka", label: "Ruaka", sub: "Flat delivery fee", fee: 450 },
-      { id: "kahawa-githurai", label: "Kahawa West, Githurai", sub: "KSh 450–500 · confirmed on WhatsApp", fee: 450 },
-      { id: "karen", label: "Karen", sub: "KSh 500–700 · confirmed on WhatsApp", fee: 500 },
-      { id: "syokimau-mlolongo", label: "Syokimau, Mlolongo", sub: "KSh 500–700 · confirmed on WhatsApp", fee: 500 },
-      { id: "kitengela-athiriver", label: "Kitengela, Athi River", sub: "KSh 700–800 · confirmed on WhatsApp", fee: 700 },
-      { id: "kikuyu-ruiru-juja", label: "Kikuyu, Ruiru, Juja", sub: "KSh 700–800 · confirmed on WhatsApp", fee: 700 },
-      { id: "custom", label: "Outside Nairobi", sub: "Delivery outside Nairobi will be charged according to the courier's rates and will be borne by the customer", fee: 0 }
+      { id: "ngara-upperhill", label: "Ngara, Upper Hill", sub: "Confirm delivery charges on WhatsApp", fee: 150 },
+      { id: "westlands-parklands", label: "Westlands, Parklands", sub: "Confirm delivery charges on WhatsApp", fee: 250 },
+      { id: "kilimani-lavington", label: "Kilimani, Kileleshwa, Lavington", sub: "Confirm delivery charges on WhatsApp", fee: 300 },
+      { id: "southb-southc", label: "South B, South C", sub: "Confirm delivery charges on WhatsApp", fee: 300 },
+      { id: "eastleigh", label: "Eastleigh", sub: "Confirm delivery charges on WhatsApp", fee: 250 },
+      { id: "langata", label: "Lang'ata", sub: "Confirm delivery charges on WhatsApp", fee: 350 },
+      { id: "donholm-buruburu-umoja", label: "Donholm, Buruburu, Umoja", sub: "Confirm delivery charges on WhatsApp", fee: 350 },
+      { id: "embakasi", label: "Embakasi", sub: "Confirm delivery charges on WhatsApp", fee: 400 },
+      { id: "kasarani-roysambu", label: "Kasarani, Roysambu", sub: "Confirm delivery charges on WhatsApp", fee: 400 },
+      { id: "ruaka", label: "Ruaka", sub: "Confirm delivery charges on WhatsApp", fee: 450 },
+      { id: "kahawa-githurai", label: "Kahawa West, Githurai", sub: "Confirm delivery charges on WhatsApp", fee: 450 },
+      { id: "karen", label: "Karen", sub: "Confirm delivery charges on WhatsApp", fee: 500 },
+      { id: "syokimau-mlolongo", label: "Syokimau, Mlolongo", sub: "Confirm delivery charges on WhatsApp", fee: 500 },
+      { id: "kitengela-athiriver", label: "Kitengela, Athi River", sub: "Confirm delivery charges on WhatsApp", fee: 700 },
+      { id: "kikuyu-ruiru-juja", label: "Kikuyu, Ruiru, Juja", sub: "Confirm delivery charges on WhatsApp", fee: 700 },
+      // fee is 0 here only because the actual cost is unknown/set by the courier — it is
+      // NOT a free zone. feeLabel overrides the normal "fee===0 -> Free" display below (see
+      // renderZoneOptions/buildWhatsAppMessage in app.js) so this shows nothing instead of "Free".
+      { id: "custom", label: "Outside Nairobi", sub: "Delivery outside Nairobi will be charged according to the courier's rates and will be borne by the customer", fee: 0, feeLabel: "" }
     ]
   },
 
