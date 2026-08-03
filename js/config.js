@@ -43,10 +43,10 @@ const ORAIMO_CONFIG = {
   },
 
   hours: {
-    weekday: "Mon–Sat: 9:00 AM – 7:00 PM",
+    weekday: "Mon–Sat: 8:00 AM – 8:00 PM",
     sunday: "Sunday: 11:00 AM – 5:00 PM",
     // machine-readable, used in LocalBusiness structured data
-    schema: ["Mo-Sa 09:00-19:00", "Su 11:00-17:00"]
+    schema: ["Mo-Sa 08:00-20:00", "Su 11:00-17:00"]
   },
 
   warranty: {
