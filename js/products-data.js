@@ -186,7 +186,7 @@ const ORAIMO_DATA = {
       "categoryName": "Power Banks",
       "icon": "powerbank",
       "gradient": "g-lime",
-      "price": 1600,
+      "price": 1900,
       "oldPrice": null,
       "description": "10,000mAh capacity with 22.5W super fast charging to top up your devices in a hurry.",
       "features": [
@@ -374,8 +374,8 @@ const ORAIMO_DATA = {
       "categoryName": "Power Banks",
       "icon": "powerbank",
       "gradient": "g-lime",
-      "price": 4300,
-      "oldPrice": 5200,
+      "price": 6500,
+      "oldPrice": 7200,
       "description": "Oraimo Power Nova Q31 powerbank, 30,000mAh capacity with 22.5W fast charging for multi-day power on the road.",
       "features": [
         "Oraimo Power Nova Q31 powerbank",
@@ -2185,7 +2185,7 @@ const ORAIMO_DATA = {
       "categoryName": "Bluetooth Speakers",
       "icon": "speaker",
       "gradient": "g-emerald",
-      "price": 4900,
+      "price": 5900,
       "oldPrice": null,
       "description": "Portable Bluetooth speaker tuned for punchy, room-filling sound.",
       "features": [
