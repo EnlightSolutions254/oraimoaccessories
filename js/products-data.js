@@ -405,6 +405,48 @@ const ORAIMO_DATA = {
       ]
     },
     {
+      "id": "powerbanks-09",
+      "sku": "ORM-POW-009",
+      "slug": "oraimo-powernova-qf1-27000mah",
+      "name": "Oraimo PowerNova QF1 27000mAh 22.5W Power Bank",
+      "brand": "Oraimo",
+      "category": "powerbanks",
+      "categoryName": "Power Banks",
+      "icon": "powerbank",
+      "gradient": "g-lime",
+      "price": 3800,
+      "oldPrice": 4500,
+      "description": "Oraimo PowerNova QF1 powerbank, 27,000mAh capacity with 22.5W fast charging, QC3.0 & PD3.0 compatible for quick top-ups on the go.",
+      "features": [
+        "Charges your phone up to 5.5 times",
+        "Charges phone to 60% in 30 minutes",
+        "QC3.0 & PD3.0 compatible"
+      ],
+      "specifications": {
+        "Brand": "Oraimo",
+        "Category": "Power Banks",
+        "Capacity": "27,000mAh",
+        "Output": "22.5W fast charging",
+        "Fast Charge Protocol": "QC3.0 & PD3.0",
+        "Warranty": "Up to 1 Year Official Warranty",
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
+      },
+      "stock": 10,
+      "rating": 4.9,
+      "reviews": 534,
+      "badge": "new",
+      "featured": false,
+      "popular": false,
+      "newArrival": true,
+      "color": "Black",
+      "relatedProducts": [
+        "powerbanks-01",
+        "powerbanks-08",
+        "powerbanks-05",
+        "powerbanks-07"
+      ]
+    },
+    {
       "id": "smartwatches-01",
       "sku": "ORM-SMA-001",
       "slug": "watch-5-lite",
