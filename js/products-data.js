@@ -376,16 +376,20 @@ const ORAIMO_DATA = {
       "gradient": "g-lime",
       "price": 6500,
       "oldPrice": 7200,
-      "description": "Oraimo Power Nova Q31 powerbank, 30,000mAh capacity with 22.5W fast charging for multi-day power on the road.",
+      "description": "Oraimo Power Nova Q31 powerbank, 50,000mAh capacity with 85W ultra fast charging, LED smart power display, and 4-device charging for multi-day power on the road.",
       "features": [
-        "Oraimo Power Nova Q31 powerbank",
-        "30,000mAh capacity with 22.5W fast charging for multi-day power on the road"
+        "Fully charges phone up to 11 times",
+        "85W ultra fast charging",
+        "LED smart power display",
+        "4-device charging",
+        "AniFast compatible"
       ],
       "specifications": {
         "Brand": "Oraimo",
         "Category": "Power Banks",
-        "Capacity": "30,000mAh",
-        "Output": "22.5W fast charging",
+        "Capacity": "50,000mAh",
+        "Output": "85W ultra fast charging",
+        "Display": "LED smart power display",
         "Warranty": "Up to 1 Year Official Warranty",
         "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
       },
@@ -442,6 +446,48 @@ const ORAIMO_DATA = {
       "relatedProducts": [
         "powerbanks-01",
         "powerbanks-08",
+        "powerbanks-05",
+        "powerbanks-07"
+      ]
+    },
+    {
+      "id": "powerbanks-10",
+      "sku": "ORM-POW-010",
+      "slug": "oraimo-power-nova-q31-30000mah",
+      "name": "Oraimo PowerNova Q31 30000mAh 22.5W Power Bank",
+      "brand": "Oraimo",
+      "category": "powerbanks",
+      "categoryName": "Power Banks",
+      "icon": "powerbank",
+      "gradient": "g-lime",
+      "price": 4300,
+      "oldPrice": null,
+      "description": "Oraimo PowerNova Q31 powerbank, 30,000mAh capacity with 22.5W fast charging, PD3.0 & QC3.0 compatible for quick, reliable top-ups on the go.",
+      "features": [
+        "Charges your phone up to 7 times",
+        "Charges phone to 60% in 30 minutes",
+        "PD3.0 & QC3.0 compatible"
+      ],
+      "specifications": {
+        "Brand": "Oraimo",
+        "Category": "Power Banks",
+        "Capacity": "30,000mAh",
+        "Output": "22.5W fast charging",
+        "Fast Charge Protocol": "PD3.0 & QC3.0",
+        "Warranty": "Up to 1 Year Official Warranty",
+        "Origin": "Authorized dealer: Oraimo shop Mfangano street, Nairobi"
+      },
+      "stock": 12,
+      "rating": 4.6,
+      "reviews": 27,
+      "badge": null,
+      "featured": false,
+      "popular": false,
+      "newArrival": false,
+      "color": "Black",
+      "relatedProducts": [
+        "powerbanks-08",
+        "powerbanks-09",
         "powerbanks-05",
         "powerbanks-07"
       ]
