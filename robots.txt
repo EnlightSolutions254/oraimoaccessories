@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
-Sitemap: https://oraimoaccessories.co.ke/sitemap.xml
+Sitemap: https://oraimoshopmfangano.co.ke/sitemap.xml
